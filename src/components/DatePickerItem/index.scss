@@ -1,0 +1,44 @@
+.datepicker {
+
+    &__colum {
+        flex: 1;
+    }
+
+    &__viewport {
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            pointer-events: none;
+            background: linear-gradient(#f7f7f7,rgba(245,245,245,0)52%,rgba(245,245,245,0)48%,#f7f7f7);
+        }
+    }
+
+    &__wheel {
+        position: absolute;
+        height: 40px;
+        top: 50%;
+        margin-top: -20px;
+        width: 100%;
+        border-top: 1px solid #dbdbdb;
+        border-bottom: 1px solid #dbdbdb;
+    }
+
+    &__item {
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.375em;
+        cursor: pointer;
+
+        &.disabled {
+            color: rgb(191, 191, 191);
+        }
+    }
+}

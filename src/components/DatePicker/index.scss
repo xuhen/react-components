@@ -1,0 +1,79 @@
+.datepicker {
+    position: absolute;
+    left: 0;
+    bottom: -200000px;
+    width: 100%;
+    z-index: 1;
+    font-size: 16px;
+    text-align: center;
+    font-family: arial,verdana,sans-serif;
+    box-sizing: content-box;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    transition: all 0.2s ease-in-out;
+
+    &.show {
+        bottom: 0;
+    }
+
+    &__header {
+        min-height: 2em;
+        line-height: 2em;
+        font-size: 1.125em;
+    }
+
+    &__caption {
+        display: flex;
+        padding: .5em .25em;
+        &-item {
+            flex: 1;
+            margin: 0 .25em;
+            height: 40px;
+            line-height: 40px;
+            font-size: 1.2em;
+        }
+    }
+
+    &__content {
+        display: flex;
+        padding: .5em .25em;
+    }
+
+    &__navbar {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        border-bottom: 1px solid #acacac;
+
+        &-btn {
+            height: 2.5em;
+            line-height: 2.5em;
+            float: right;
+            padding: 0 1em;
+            cursor: pointer;
+            color: #007aff;
+
+            &:nth-child(2) {
+                float: left;
+            }
+        }
+    }
+}
+
+.datepicker-modal {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
